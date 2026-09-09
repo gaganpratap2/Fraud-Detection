@@ -1,0 +1,24 @@
+package com.banking.accountservice.dto;
+
+import com.banking.accountservice.entity.AccountStatus;
+import com.banking.accountservice.entity.AccountType;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public class AccountResponse {
+
+    private String id;
+    private String accountHolderName;
+    private String accountHolderNumber;
+    private String email;
+    private String phone;
+    private AccountType accountType;
+    private AccountStatus accountStatus;
+    private BigDecimal balance ;
+    private BigDecimal dailyTransactionLimit;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+
+}
