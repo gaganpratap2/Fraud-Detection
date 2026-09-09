@@ -77,8 +77,4 @@ public class AccountController {
         accountService.creditBalance(accountNumber , account);
         return ResponseEntity.ok("Balance Credited Successfully");
     }
-
-//    git add .
-//git commit -m "feat(account-service): add account management and balance endpoints"
-
 }
