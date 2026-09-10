@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 public interface AccountServiceClient {
 
     @PutMapping("/api/v1/accounts/{accountNumber}/deduct")
-    String deductbalance(
+    String deductBalance(
             @PathVariable String AccountNumber,
             @RequestParam BigDecimal amount);
 }
