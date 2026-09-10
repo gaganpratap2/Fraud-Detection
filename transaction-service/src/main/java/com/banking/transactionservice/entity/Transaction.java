@@ -47,4 +47,5 @@ public class Transaction {
     private LocalDateTime createdAt;
 
     private LocalDateTime completedAt;
+
 }
