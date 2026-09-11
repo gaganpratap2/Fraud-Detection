@@ -28,7 +28,7 @@ public class FraudDetectionEventConsume {
                 payload.get("transactionId"));
 
         try{
-            fraudDetectionService.chechTransaction(payload);
+            fraudDetectionService.checkTransaction(payload);
         }catch (Exception e){
 
         }
