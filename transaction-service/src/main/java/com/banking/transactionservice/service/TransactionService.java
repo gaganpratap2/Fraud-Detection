@@ -222,6 +222,20 @@ public class TransactionService {
         );
     }
 
+    public void processCleanResult(String transactionID) {
+
+        Transaction transaction = transactionRepository.findById(transactionID)
+                .orElseThrow(() -> new RuntimeException(
+                        "Transaction not found " + transactionID
+                ));
+
+        if (transaction.getStatus() != TransactionStatus.PROCESSING) {
+            log.warn("Transaction {} not PROCESSING - skipping", transactionID);
+            return;
+        }
+
+        completeTransaction(transaction);
+    }
 
 
     private TransactionResponse mapToResponse(Transaction transaction) {
