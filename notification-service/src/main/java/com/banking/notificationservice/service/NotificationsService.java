@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class NotificationsService {
 
-    @KafkaListener(topic = "transaction.otp.generated")
+    @KafkaListener(topics = "transaction.otp.generated")
     public void consumeOtpGenerated(
             @Payload Map<String , Object> payload){
 
